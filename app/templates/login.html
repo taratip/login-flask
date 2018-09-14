@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+  Login - {{ super() }}
+{% endblock %}
+
+{% block app_content %}
+<div class="row">
+    <div class="col-md-12">
+      <header><img class="logo" src="http://placehold.it/130x50" alt="Placeholder Image"></header>
+    </div> <!-- Ending div for column -->
+  </div> <!-- Ending div for row -->
+
+  <div class="container">
+    <!-- Starting fist section -->
+    <div class="row">
+      <div class="card col-md-4 offset-md-4">
+        <h3>Sign in</h3>
+        {{ wtf.quick_form(form) }}
+        <p class="note small-text">
+          <a href=""><span class="black-color">&#9656;</span> Need help?</a>
+        </p>
+      </div> <!-- Ending for column -->
+    </div> <!-- Ending div for row -->
+
+    <!-- Starting second section -->
+    <div class="row second-row">
+      <div class="col-md-4 offset-md-4">
+        <div class="row">
+          <div class="col-md hr-line">
+            <hr>
+          </div> <!-- Ending div for column line -->
+          <div class="col-md">
+            <span class="xsmall-text">New to Company?</span>
+          </div> <!-- Ending div for column text -->
+          <div class="col-md hr-line">
+            <hr>
+          </div> <!-- Ending div for column line -->
+        </div> <!-- Ending div for row -->
+        <div class="row button-row">
+          <a href="{{ url_for('register') }}" class="btn btn-secondary btn-sm btn-block">Create your Company account</a>
+        </div> <!-- Ending div for row -->
+      </div> <!-- Ending div for column -->
+    </div> <!-- Ending div for row -->
+
+  </div> <!-- Ending div for container -->
+
+{% endblock %}

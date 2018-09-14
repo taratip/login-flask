@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+  {{ super() }} Registration
+{% endblock %}
+
+{% block app_content %}
+<div class="row">
+    <div class="col-md-12">
+      <header><img class="logo" src="http://placehold.it/130x50" alt="Placeholder Image"></header>
+    </div> <!-- Ending div for column -->
+  </div> <!-- Ending div for row -->
+
+  <div class="container">
+    <!-- Starting fist section -->
+    <div class="row">
+      <div class="card col-md-4 offset-md-4">
+        <h3 class="register-header">Create account</h3>
+        {{ wtf.quick_form(form) }}
+        <p class="note xsmall-text">
+          By creating an account, you agree to Company's <a href="">Conditions of Use</a> and <a href="">Privacy Notice.</a>
+        </p>
+        <hr>
+        <p class="note small-text">Already have an account?
+          <a href="{{ url_for('login') }}">Sign in &#9656;</a></p>
+      </div> <!-- Ending for column -->
+    </div> <!-- Ending div for row -->
+  </div> <!-- Ending div for container -->
+
+{% endblock %}

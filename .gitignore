@@ -1,5 +1,6 @@
 ECHO is on.
 venv/
 __pycache__/
+config.py
 
 ############# venv folder and all of it's contents now ignored when staging files

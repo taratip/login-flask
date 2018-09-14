@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
 
-{% block content %}
-  <h1>Hi, {{ name }}</h1>
-  <h2>The number passed in is {{ num }}</h2>
-  <p>Python Fall Class Names</p>
-  <ul>
-    {% for name in names %}
-      {% if name == 'Connor' %}
-        <li><b>{{ name }} - Instructor</b></li>
-      {% elif name == 'Chet' %}
-        <li><i>{{ name }} - Student</i></li>
-      {% else %}
-        <li>{{ name }} - Student</li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+{% block title %}
+  Home - {{ super() }}
+{% endblock %}
+
+{% block app_content %}
+  <div class="container">
+    <div class="row extra-margin">
+      <div class="col-md-12">
+        <h1>Welcome {{ name }}</h1>
+      </div> <!-- Ends the col for title -->
+    </div> <!-- Ends the row for title -->
+  </div> <!-- Ends div for container -->
 {% endblock %}
